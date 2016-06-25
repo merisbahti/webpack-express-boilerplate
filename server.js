@@ -11,7 +11,6 @@ const isDeveloping = process.env.NODE_ENV !== 'production';
 const port = isDeveloping ? 3000 : process.env.PORT;
 const app = express();
 
-
 if (isDeveloping) {
   const compiler = webpack(config);
   const middleware = webpackMiddleware(compiler, {
@@ -38,7 +37,7 @@ if (isDeveloping) {
 
 app.get('*', (req, res) => {
   res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.write("404 Not Found")
+  res.write('404 Not Found');
   res.end();
 });
 

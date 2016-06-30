@@ -8,7 +8,7 @@ export default class App extends React.Component {
   }
   render() {
     return (
-      <div className={styles.app}>
+      <div class={styles.app}>
         bar
       </div>
     );
